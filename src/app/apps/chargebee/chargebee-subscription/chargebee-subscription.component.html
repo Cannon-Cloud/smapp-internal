@@ -1,0 +1,81 @@
+<div fxLayout="row wrap">
+  <div fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
+    <mat-card>
+      <mat-card-content>
+        <div class="table-rasponsive">
+          <mat-table
+            #table
+            [dataSource]="dataSource"
+            matSort
+            matSortActive="createdAt"
+            matSortDirection="desc"
+            style="max-height: 500px; overflow: auto"
+          >
+            <ng-container matColumnDef="content.customer.first_name">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>
+                Customer Name
+              </mat-header-cell>
+              <mat-cell *matCellDef="let charges">
+                {{ charges.content.customer.first_name }}
+              </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="content.subscription.plan_id">
+              <mat-header-cell *matHeaderCellDef> Plan Id </mat-header-cell>
+              <mat-cell *matCellDef="let charges">
+                {{ charges.content.subscription.plan_id }}
+              </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="content.subscription.plan_unit_price">
+              <mat-header-cell *matHeaderCellDef> Unit Price </mat-header-cell>
+              <mat-cell *matCellDef="let charges">
+                {{ charges.content.subscription.plan_unit_price }}
+              </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="content.subscription.plan_quantity">
+              <mat-header-cell *matHeaderCellDef>
+                Plan Quantity
+              </mat-header-cell>
+              <mat-cell *matCellDef="let charges">
+                {{ charges.content.subscription.plan_quantity }}
+              </mat-cell>
+            </ng-container>
+
+            <ng-container
+              matColumnDef="content.subscription.billing_period_unit"
+            >
+              <mat-header-cell *matHeaderCellDef>
+                Billing Period
+              </mat-header-cell>
+              <mat-cell *matCellDef="let charges">
+                {{ charges.content.subscription.billing_period_unit }}
+              </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="createdAt">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>
+                createdAt
+              </mat-header-cell>
+              <mat-cell *matCellDef="let charges">
+                {{ charges.createdAt | date: "medium" }}
+              </mat-cell>
+            </ng-container>
+
+            <mat-header-row
+              *matHeaderRowDef="displayedColumns"
+            ></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+          </mat-table>
+          <mat-paginator
+            [pageSizeOptions]="[5, 10, 20]"
+            showFirstLastButtons
+            aria-label="Select page of periodic elements"
+          >
+          </mat-paginator>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

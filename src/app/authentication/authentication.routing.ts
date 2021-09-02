@@ -1,0 +1,27 @@
+import { Routes } from "@angular/router";
+import { CoursesComponent } from "../apps/courses/courses.component";
+
+import { ErrorComponent } from "./error/error.component";
+import { ForgotComponent } from "./forgot/forgot.component";
+import { LockscreenComponent } from "./lockscreen/lockscreen.component";
+import { LoginComponent } from "./login/login.component";
+import { RegisterComponent } from "./register/register.component";
+export const AuthenticationRoutes: Routes = [
+  {
+    path: "",
+    children: [
+      {
+        path: "404",
+        component: ErrorComponent,
+      },
+      {
+        path: "forgot",
+        component: ForgotComponent,
+      },
+      {
+        path: "lockscreen",
+        component: LockscreenComponent,
+      },
+    ],
+  },
+];
