@@ -18,6 +18,6 @@ export class ChargeService {
   }
 
   getChgs(): Observable<Charge[]> {
-    return this.http.get<Charge[]>("http://147.182.215.213:3000/charges");
+    return this.http.get<Charge[]>("https://api.oursmapp.com:3000/charges");
   }
 }
