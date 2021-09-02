@@ -38,7 +38,7 @@ import { SocketIoModule, SocketIoConfig } from "ngx-socket-io";
 
 const config: SocketIoConfig = {
   url: "http://147.182.215.213:3000",
-  options: {},
+  options: { transports: ["websocket"] },
 };
 
 @NgModule({
