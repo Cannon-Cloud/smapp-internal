@@ -18,6 +18,6 @@ export class ChargeService {
   }
 
   getChgs(): Observable<Charge[]> {
-    return this.http.get<Charge[]>("https://api.oursmapp.com:3001/charges");
+    return this.http.get<Charge[]>("https://api.oursmapp.com:8080/charges");
   }
 }

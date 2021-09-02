@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   apiURL: "http://localhost:3000/api/v1/",
-  webApiUrl: "https://api.oursmapp.com:3001/",
+  webApiUrl: "https://api.oursmapp.com:8080/",
 };
 
 /*

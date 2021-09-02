@@ -37,7 +37,7 @@ import { MatDialogModule } from "@angular/material/dialog";
 import { SocketIoModule, SocketIoConfig } from "ngx-socket-io";
 
 const config: SocketIoConfig = {
-  url: "https://api.oursmapp.com:3001",
+  url: "https://api.oursmapp.com:8080",
   options: { transports: ["polling"] },
 };
 
