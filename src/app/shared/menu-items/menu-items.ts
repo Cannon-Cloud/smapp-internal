@@ -50,6 +50,7 @@ const MENUITEMS = [
       { state: "chargebee", name: "Plans Created", type: "link" },
       { state: "cbcustomer", name: "Customer Created", type: "link" },
       { state: "cbsubscription", name: "Subscription Created", type: "link" },
+      { state: "donotcall", name: "Do Not Call", type: "link" },
     ],
   },
 ];
