@@ -8,6 +8,7 @@ import { CategoriesFormComponent } from "./categories/categories-form/categories
 import { ChargeBeeListComponent } from "./chargebee/chargebeen-list/chargebee-list.component";
 import { ChargeBeeCustomerComponent } from "./chargebee/chargebee-customer/chargebee-customer.component";
 import { ChargeBeeSubscriptionComponent } from "./chargebee/chargebee-subscription/chargebee-subscription.component";
+import { DonotcallComponent } from "./donotcall/donotcall-list/donotcall-list.component";
 
 export const AppsRoutes: Routes = [
   {
@@ -87,6 +88,17 @@ export const AppsRoutes: Routes = [
           urls: [
             { title: "Dashboard", url: "/dashboard" },
             { title: "Subscription Created" },
+          ],
+        },
+      },
+      {
+        path: "donotcall",
+        component: DonotcallComponent,
+        data: {
+          title: "Do Not Call",
+          urls: [
+            { title: "Dashboard", url: "/dashboard" },
+            { title: "Do Not Call List" },
           ],
         },
       },

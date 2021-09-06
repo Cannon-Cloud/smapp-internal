@@ -32,12 +32,18 @@ import { ChargeService } from "./chargebee/charge.service";
 import { ChargeBeeCustomerComponent } from "./chargebee/chargebee-customer/chargebee-customer.component";
 import { ChargeBeeSubscriptionComponent } from "./chargebee/chargebee-subscription/chargebee-subscription.component";
 
+import { DonotcallComponent } from "./donotcall/donotcall-list/donotcall-list.component";
+import { DonotcallService } from "./donotcall/donotcall.service";
+
 import { MatDialogModule } from "@angular/material/dialog";
 
 import { SocketIoModule, SocketIoConfig } from "ngx-socket-io";
+import { environment } from "src/environments/environment";
+
+const apiURL = environment.webApiUrl;
 
 const config: SocketIoConfig = {
-  url: "https://api.oursmapp.com:8080",
+  url: apiURL,
   options: { transports: ["polling"] },
 };
 
@@ -72,6 +78,7 @@ const config: SocketIoConfig = {
     CoursesFormComponent,
     CoursesComponent,
     CourseDetailComponent,
+    DonotcallComponent,
   ],
   providers: [
     CourseService,
@@ -79,6 +86,7 @@ const config: SocketIoConfig = {
     CategoriesService,
     ChargeBeeService,
     ChargeService,
+    DonotcallService,
   ],
   entryComponents: [],
 })
