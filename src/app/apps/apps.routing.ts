@@ -18,10 +18,10 @@ export const AppsRoutes: Routes = [
         path: "courses",
         component: CoursesComponent,
         data: {
-          title: "Courses",
+          title: "Request New Feature",
           urls: [
             { title: "Dashboard", url: "/dashboard" },
-            { title: "Courses" },
+            { title: "Request New Feature" },
           ],
         },
       },

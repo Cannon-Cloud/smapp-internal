@@ -1,58 +1,20 @@
-<mat-card class="course-app">
-  <mat-card-content>
-    <div fxLayout="row wrap" class="align-items-center course-filters">
-      <div fxFlex.gt-md="25" fxFlex.gt-lg="25" fxFlex="100">
-        <mat-form-field>
-          <mat-label>Search</mat-label>
-          <input matInput (keyup)="applyFilter($event)" />
-        </mat-form-field>
-      </div>
-      <div fxFlex.gt-md="50" fxFlex.gt-lg="50" fxFlex="100"></div>
-      <div fxFlex.gt-md="25" fxFlex.gt-lg="25" fxFlex="100">
-        <mat-form-field>
-          <mat-label>Category</mat-label>
-          <mat-select
-            required
-            [value]="selectedCategory"
-            (selectionChange)="ddlChange($event)"
-          >
-            <mat-option value="All" selected>All</mat-option>
-            <mat-option value="Web">Web</mat-option>
-            <mat-option value="Mobile">Mobile</mat-option>
-            <mat-option value="Android">Android</mat-option>
-            <mat-option value="Angular">Angular</mat-option>
-            <mat-option value="Design">Design</mat-option>
-          </mat-select>
-        </mat-form-field>
-      </div>
-    </div>
-  </mat-card-content>
-</mat-card>
+<mat-card class="course-app"> </mat-card>
 <div fxLayout="row wrap" class="course-app">
-  <div
-    fxFlex.gt-md="33.33"
-    fxFlex.gt-lg="33.33"
-    fxFlex="100"
-    *ngFor="let course of courseList"
-  >
+  <div fxFlex="100">
     <mat-card>
-      <mat-card-header class="course-header {{ course.courseType }}">
-        <mat-card-title>
-          <span class="course-name">{{ course.courseType }}</span>
-          <span class="course-duration">
-            <mat-icon class="m-r-10">access_time</mat-icon>{{ course.Time }}
-          </span>
-        </mat-card-title>
+      <mat-card-header class="course-header">
+        <mat-card-title> </mat-card-title>
       </mat-card-header>
       <mat-card-content class="text-center">
-        <p class="m-b-5">{{ course.courseName }}</p>
-        <small>{{ course.Update }}</small>
+        <iframe
+          src="https://forms.monday.com/forms/embed/82d64d368d9214f820bbea8495214817?r=use1"
+          width="500"
+          height="500"
+          style="border: 0; box-shadow: 5px 5px 56px 0px rgba(0, 0, 0, 0.25)"
+        ></iframe>
       </mat-card-content>
       <mat-card-actions class="text-center">
         <!-- <button mat-button>Start</button> -->
-        <a [routerLink]="['/apps/courses/coursesdetail/', course.Id]">
-          START
-        </a>
       </mat-card-actions>
     </mat-card>
   </div>

@@ -45,8 +45,8 @@ const MENUITEMS = [
     icon: "apps",
     badge: [{ type: "warning", value: "new" }],
     children: [
-      { state: "courses", name: "Courses", type: "link" },
-      { state: "categories", name: "Categories", type: "link" },
+      { state: "courses", name: "Feature Request", type: "link" },
+      // { state: "categories", name: "Categories", type: "link" },
       { state: "chargebee", name: "Plans Created", type: "link" },
       { state: "cbcustomer", name: "Customer Created", type: "link" },
       { state: "cbsubscription", name: "Subscription Created", type: "link" },
